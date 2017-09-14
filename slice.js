@@ -10,3 +10,4 @@ console.log(`arr.slice(-3) => [${arr.slice(-3)}]`);
 console.log(`arr.slice(-5) => [${arr.slice(-5)}]`);
 console.log(`arr.slice(-2,-4) => [${arr.slice(-2,-4)}]`);
 console.log(`arr.slice(-3,3) => [${arr.slice(-3,3)}]`);
+
