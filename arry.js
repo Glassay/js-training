@@ -13,8 +13,8 @@ console.log(`arr.shift('a') => [${arr}]`);
 arr.push('q');
 console.log(`arr.push('q') => [${arr}]`);
 
-arr.pop();
-console.log(`arr.pop() => [${arr}]`);
+arr.sort();
+console.log(`arr.pop() => [${arr}]`)
 
 arr.pop();
 console.log(`arr.pop() => [${arr}]`);
@@ -30,3 +30,7 @@ console.log(`arr.pop() => [${arr}]`);
 
 arr.pop();
 console.log(`arr.pop() => [${arr}]`);
+
+arr.pop();
+console.log(`arr.pop() => [${arr}]`);
+
