@@ -1,16 +1,6 @@
-/**2017-9-14 Jifeng Cheng
- * 
+/**
+ * 2017-9-16 Jifeng Cheng
  */
-/*var people = {
-    man: true,
-    age: 10,
-    func: function(){
-        console.log(`man => ${this.man} age => ${this.age} func => ${this.func}`);
-    }
-}
-
-people.func();*/
-
 var o = Object.create(null,{
     //foo is a regular 'value property'
     foo: {
@@ -32,7 +22,7 @@ var o = Object.create(null,{
 console.log(Object.getOwnPropertyDescriptor(o,'foo'));
 console.log(Object.getOwnPropertyDescriptor(o,'foo'));
 
-/*o.name ='x';
+o.name ='x';
 
 console.log(Object.keys(o));
 console.log(`typeof o :${typeof o}`);
@@ -55,7 +45,7 @@ console.log(Object.keys(x));
 console.log(x.age);
 x();
 console.log(`typeof x:${typeof x}
-prototypeof x:${Object.getPrototypeOf(x)}`);*/
+prototypeof x:${Object.getPrototypeOf(x)}`);
 
 
 
