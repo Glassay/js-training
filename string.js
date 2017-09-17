@@ -4,7 +4,7 @@
  * charAt, concat, includes, endsWith, indexOf
  * 
  */
-var str = 'hello cheng';
+var str = '    hello cheng hello cheng hi    ';
 
 //charAt:查找指定位置的字符串，大于或是负数为空
 console.log(`charAt(1): ${str.charAt(100)}`);
@@ -53,3 +53,63 @@ console.log(`padStart(15): ${str.padEnd(15)}`);
 console.log(`padStart(20,jifeng): ${str.padStart(20,'jifeng')}`);
 console.log(`padStart(8,jifeng): ${str.padStart(8,'jifeng')}`);
 console.log(`padStart(-20,jifeng): ${str.padStart(-20,'jifeng')}`);
+
+//reoeat(count):复制str，复制的次数取决于count的值；0：不复制，负数：抛出异常
+//console.log(`repeat(-1): ${str.repeat(-1)}`);抛出异常
+console.log(`repeat(0): ${str.repeat(0)}`);
+console.log(`repeat(2): ${str.repeat(2)}`);
+console.log(`repeat(2.4): ${str.repeat(2.4)}`);
+console.log(`repeat(3.4): ${str.repeat(3.4)}`);
+//console.log(`repeat(1/0): ${str.repeat(1/0)}`);抛出异常
+
+//raplace:直接替换字符
+console.log(`replace: ${str.replace('h','r')}`);
+console.log(`replace(substr,function): ${str.replace('hello',function func(str){
+    var str = 'hi';
+    return str;
+})}`)
+
+//slice:从slice中截取一定长度的字符串，负数不行，超出str范围不影响，左闭有开
+console.log(`slice(1,2): ${str.slice(1,2)}`);
+console.log(`slice(0,6): ${str.slice(0,6)}`);
+console.log(`slice(-4,6): ${str.slice(-4,6)}`);
+console.log(`slice(0,30): ${str.slice(0,30)}`);
+
+//split:切掉str中的某一部分字符串，并确定要分成多少份，如果要切空字符串就相当于直接根据后面的值进行分组，超出的直接舍去，
+console.log(`split('lo',4): ${str.split('lo',4)}`);
+console.log(`split('lo',1): ${str.split('lo',1)}`);
+console.log(`split('lo',0): ${str.split('lo',0)}`);
+console.log(`split('',1): ${str.split('',1)}`);
+console.log(`split('lo',10): ${str.split('lo',10)}`);
+console.log(`split('',30): ${str.split('',30)}`);
+console.log(`split('',-1): ${str.split('',-1)}`);
+console.log(`split('',-20): ${str.split('',-20)}`);
+console.log(`split('lo',-1): ${str.split('lo',-1)}`);
+console.log(`split('che'-10): ${str.split('che',-10)}`);
+
+//startsWith:看是不是以某个字符串开头,可以自定义从哪个位置开始
+console.log(`startswith('hello): ${str.startsWith('hello')}`);
+console.log(`startswith('ello): ${str.startsWith('ello')}`);
+console.log(`startswith('hello): ${str.startsWith('hello')}`);
+console.log(`startswith('llo‘,2): ${str.startsWith('llo',2)}`);
+
+//substr:取str中的某一串字符，可以规定范围
+console.log(`substr('1,2'): ${str.substr(1,2)}`);
+console.log(`substr('-1,2'): ${str.substr(-1,2)}`);
+console.log(`substr('-1,-2'): ${str.substr(-1,-2)}`);
+console.log(`substr('1,-2'): ${str.substr(1,-2)}`);
+console.log(`substr('1,30'): ${str.substr(1,30)}`);
+console.log(`substr('0,30'): ${str.substr(0,30)}`);
+
+//trim:删除两端的空格
+console.log(`trim(): ${str.trim()}`);
+
+//trimLeft:删除左边空格
+console.log(`trimLeft(): ${str.trimLeft()}`);
+
+//trimRight:删除右边空格
+console.log(`trimRight(): ${str.trimRight()}`);
+
+
+
+
