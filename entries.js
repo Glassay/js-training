@@ -9,7 +9,7 @@ var obj = Object.create(null, {
         writable: true,
         configurable: true,
         value: 'moto!',
-        enumerable: false
+        enumerable: true
 
     }
 });
@@ -17,3 +17,4 @@ console.log(Object.entries(obj));
 //console.log(obj);
 console.log(Object.getOwnPropertyNames(obj));
 console.log(Object.keys(obj));
+
