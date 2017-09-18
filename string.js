@@ -74,6 +74,8 @@ console.log(`slice(1,2): ${str.slice(1,2)}`);
 console.log(`slice(0,6): ${str.slice(0,6)}`);
 console.log(`slice(-4,6): ${str.slice(-4,6)}`);
 console.log(`slice(0,30): ${str.slice(0,30)}`);
+console.log(`slice(0,8): ${str.slice(0,8)}`);
+console.log(`slice(0,): ${str.slice(0,30)}`);
 
 //split:切掉str中的某一部分字符串，并确定要分成多少份，如果要切空字符串就相当于直接根据后面的值进行分组，超出的直接舍去，
 console.log(`split('lo',4): ${str.split('lo',4)}`);
