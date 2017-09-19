@@ -4,6 +4,7 @@
  */
 var person = function(age) {
     this.age = age;
+    return age;
 }
 
 var per = new person(20);
@@ -39,6 +40,7 @@ console.log(`compare person and per.setAge: ${typeof person.prototype === typeof
 console.log(per.so());
 console.log(person.so());
 console.log(per.sel());
+console.log(person(10));
 
 
 
