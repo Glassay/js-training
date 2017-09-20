@@ -6,6 +6,7 @@ function func() {
         }
     }
 }
+
 var a = func();
 var b = a();
 var c = b;

@@ -17,6 +17,7 @@ Object.defineProperty(a, 'len', {
     }
 });
 console.log(a.len);
+console.log(Object.getOwnPropertyNames(a));
 
 
 
