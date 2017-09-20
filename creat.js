@@ -36,19 +36,48 @@ console.log(`a.we: ${a.we}`);
 console.log(`a.age,b.age: ${a.age},${b.age}`);
 
 var str = 'a';
+var arr = [1,2];
+var num = 1;
+var bool = false;
+
 console.log(`str.prototype: ${typeof str.prototype}`);
 console.log(`str.proto: ${typeof str.__proto__}`);
 console.log(`typeof str: ${typeof str}`);
+console.log(`num.proto: ${num.__proto__}`);
 
-var arr = [1,2];
 console.log(`arr.prototype: ${typeof arr.prototype}`);
 console.log(`arr.proto: ${typeof arr.__proto__}`);
 console.log(`typeof arr: ${typeof arr}`);
+console.log(`typeof Array: ${typeof Array}`);
+console.log(`typeof String: ${typeof Strig}`);
+console.log(`typeof String.proto: ${typeof String.__proto__}`);
+console.log(`typeof String.prototype: ${typeof String.prototype}`);
 
 console.log(`compare typeof 'arr' and 'Object.propotype': ${typeof arr === typeof Object.prototype}`);
-console.log(`compare typeof 'string' and 'Object.proto': ${typeof string === typeof Object.__proto__}`);
-console.log(`compare typeof 'string' and 'Function.prototype': ${typeof string === typeof Function.prototype}`);
-console.log(`compare typeof 'string' and 'Function.proto': ${typeof string === typeof Function.__proto__}`);
-console.log(`compare typeof 'string' and 'Objcet.proto.proto': ${typeof string === typeof Object.__proto__.__proto__}`);
+console.log(`compare typeof 'str.proto' and 'Object.proto': ${typeof str.__proto__ === typeof Object.__proto__}`);
+console.log(`compare typeof 'str.proto' and 'Object.prototype': ${typeof str.__proto__ === typeof Object.prototype}`);
+console.log(`compare typeof 'str.proto' and 'Function.prototype.ptoto': ${typeof str.__proto__ === typeof Function.prototype.__proto__}`);
+console.log(`compare typeof 'str.protp.proto' and 'Objcet.proto.proto': ${typeof str.__proto__.__proto__ === typeof Object.__proto__.__proto__}`);
+console.log(`compare 'arr.proto' and 'str.proto': ${arr.__proto__ === str.__proto__}`);
+console.log(`compare 'arr.proto.proto' and 'Object.prototype' proto: ${arr.__proto__.__proto__ === Object.prototype}`);
+console.log(`compare 'arr.proto.proto' and 'Object.prototype': ${arr.__proto__.__proto__ === Object.prototype}`);
+console.log(`typeof 'compare arr.proto and Array.rototype': ${arr.__proto__ === Array.prototype}`);
+console.log(`compare 'arr.proto and Array.prototypr: ${arr.__proto__ === Array.prototype}`);
+console.log(`compare num.proto and Number.prototype: ${num.__proto__ === Number.prototype}`);
+console.log(`num.proto.proto: ${ typeof num.__proto__.__proto__}`);
+console.log(`compare num.proto.proto and Number.prototype: ${num.__proto__.__proto__ === Number.prototype}`);
+console.log(`Number.prototype.proto: ${typeof Number.prototype.__proto__}`);
+console.log(`compare Number.prototype.proto and Object.prototype: ${Number.prototype.__proto__ === Object.prototype}`);
+console.log(`compare num.proto.proto and Number.prototype: ${num.__proto__.__proto__ === Number.prototype}`);
+console.log(`compare num.proto and Number.prototype.proto: ${num.__proto__ === Number.prototype.__proto__}`);
+console.log(`compare num.proto.proto and Number.prototype.proto: ${num.__proto__.__proto__ === Number.prototype.__proto__}`);
+console.log(`Boolean.prototype.proto: ${typeof Boolean.prototype.__proto__}`);
+console.log(`Boolean.prototype.proto and Object.portotype: ${typeof Boolean.prototype.__proto__ === typeof Object.prototype}`);
+console.log(`compare Boolean.prototype and bool.proto: ${Boolean.prototype === bool.__proto__}`);
+console.log(`compare bool.proto.proto and Boolean.prototype.proto: ${bool.__proto__.__proto__ === Boolean.prototype.__proto__}`);
+console.log(`Function.prototype.constructor and Function: ${Function.prototype.constructor === Function}`);
+
+
+
 
 
