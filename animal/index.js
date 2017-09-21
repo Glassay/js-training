@@ -4,7 +4,7 @@
 //console.log('hello!');
 var arr1 = ['a','b','c','d','e'];
 var arr2 = [0,1,2,false,'',undefined,NaN,null];
-var arr3 = [1,3,5,7,9];
+var arr3 = [1,3,5,1,7,1,9,3];
 var arr4 = [1, [2, [3, [4]]]];
 const _ = require('lodash');
 function foo() {
@@ -114,7 +114,38 @@ console.log(arr3);
 console.log('sortIndex:');
 console.log(_.sortedIndex(arr3,6));
 //sorteLastIndex:倒着开始找
-console.log(_.sortedLastIndexOf(arr3,3));
+//console.log(_.sortedLastIndexOf(arr3,3));
+//sorteUniq:如果数组开头有多个1，去除多余的1，只剩一个1
+console.log('sorteUniq:');
+console.log(_.sortedUniq(arr3));
+console.log(_.sortedUniq(arr3));
+//sorteUniqBy:
+
+//tail:去除数组中的第一个元素,不会修改原来的数组
+console.log('tail:');
+console.log(_.tail(arr3));
+console.log(arr3);
+//take:去除数组中的前多少个元素,返回新数组
+console.log('take:');
+console.log(_.take(arr3,3));
+console.log(arr3);
+//takeRight:从右边开始
+//takeRightWhile:
+//takeWhile:
+
+//union:取出两个数组中的独有的元素，返回到新的数组中
+console.log('union:');
+console.log(_.union(arr3,arr1));
+
+//unionBy:
+/*console.log('unionBy:');
+console.log();*/
+//unionWith:
+//uniq:
+console.log(_.uniq(arr3));
+
+
+
 
 
 
