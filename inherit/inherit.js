@@ -29,6 +29,7 @@ cat.prototype = animal.prototype;
 cat.prototype.constructor = cat;
 console.log(cat.prototype.constructor);*/
 
+/*
 //直接继承portotype
 function animal() {
 
@@ -48,6 +49,25 @@ cat.prototype.eat = 'meat';
 var x = new dog();
 console.log(x.eat);
 console.log(dog.prototype.species);
-console.log(dog.prototype.eat)
+console.log(dog.prototype.eat)*/
+
+//利用空对象
+function animal() {
+
+}
+function cat() {
+
+}
+function dog() {
+
+}
+var f = function() {
+
+}
+f.prototype = animal.prototype;
+cat.prototype = new f();
+cat.prototype.constructor = cat;
+animal.prototype.eat = 'meat';
+console.log(cat.prototype.eat);
 
 
