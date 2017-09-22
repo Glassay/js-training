@@ -4,8 +4,9 @@
 //console.log('hello!');
 var arr1 = ['a','b','c','d','e'];
 var arr2 = [0,1,2,false,'',undefined,NaN,null];
-var arr3 = [1,3,5,1,7,1,9,3];
+var arr3 = [1,3,5,1,7,1,9,3,11,13];
 var arr4 = [1, [2, [3, [4]]]];
+var arr5 = [1,3,5,7,9]
 const _ = require('lodash');
 function foo() {
     this.a = 1;
@@ -149,6 +150,24 @@ console.log(_.uniq(arr3));
 //zip:多个数组对应位置的元素合并为一个数组
 console.log('zip:');
 console.log(_.zip([1,2,3],[4,5,6],[7,8,9]));
+//zipObject:将两个数组对应位置结合后返回到一个对象中
+console.log('zipObject:');
+console.log(arr3);
+console.log(arr5);
+console.log(_.zipObject([1,2,3],['a','b','c']));
+//console.log(_.zipObject(arr3,arr5));
+
+//without:取出不在所给元素的数组中的元素,返回新的数组
+console.log('without:');
+console.log(_.without(arr3,2,3,4));
+console.log(_.without(arr3,3,7,1));
+
+//xor:将两个数组中不同的元素返回到一个新的数组
+console.log('xor:');
+console.log(_.xor(arr3,arr5));
+//xorBy:
+//xorWith:
+
 
 
 
