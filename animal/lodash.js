@@ -167,6 +167,48 @@ console.log('xor:');
 console.log(_.xor(arr3,arr5));
 //xorBy:
 //xorWith:
+//zipWith:
+
+/*var users = [
+    { 'user': 'zhang', 'age': 36, 'active': true },
+    { 'user': 'cheng',   'age': 40, 'active': false }
+  ];*/
+var gather = [
+    {'name': 'zhang', 'age': 21, 'active': true},
+    {'name': 'cheng', 'age': 22, 'active': false}
+];
+
+//filter:迭代一个集合，将所有参数为truth的返回到一个数组中
+ console.log('filter:');
+ console.log(_.filter(gather,['active', true]));
+ console.log(_.filter(gather,{'active': false}));
+ console.log(_.filter(gather,'active'));
+
+//'Lang' Methods
+//castArray:将一个值转化到一个数组里
+console.log('castArray:');
+console.log(_.castArray(1));
+console.log(_.castArray(2));
+console.log(_.castArray('a','b','c'))
+
+//clone:复制一个对象到另一个新的对象中
+var objects = [{'a': 1}, {'b': 2}];
+var shallow = _.clone(objects);
+var obj = _.clone(objects);
+console.log('clone:');
+console.log(shallow);
+console.log(shallow[0] === shallow[1]);
+console.log(shallow[0] === objects[0]);
+console.log(obj);
+
+//cloneDeep:
+console.log('cloneDeep:');
+var deep = _.cloneDeep(objects);
+console.log(deep);
+console.log(objects);
+console.log(deep[0] === objects[0]);
+
+
 
 
 

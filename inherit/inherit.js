@@ -52,6 +52,7 @@ console.log(dog.prototype.species);
 console.log(dog.prototype.eat)*/
 
 //利用空对象
+/*
 function animal() {
 
 }
@@ -68,6 +69,26 @@ f.prototype = animal.prototype;
 cat.prototype = new f();
 cat.prototype.constructor = cat;
 animal.prototype.eat = 'meat';
-console.log(cat.prototype.eat);
+console.log(cat.prototype.eat);*/
+
+//拷贝继承
+function child() {
+
+}
+function parent() {
+
+}
+function x(child,parent) {
+    var p = parent.prototype;
+    var c = child.prototype;
+    for (var i in p) {
+        c[i] = p[i];
+    }
+    c.uber = p;
+}
+console.log(child.uber);
+
+
+
 
 
