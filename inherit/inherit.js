@@ -86,7 +86,7 @@ function x(child,parent) {
     }
     c.uber = p;
 }
-console.log(child.uber);
+console.log();
 
 
 

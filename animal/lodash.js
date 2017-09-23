@@ -191,7 +191,7 @@ console.log(_.castArray(1));
 console.log(_.castArray(2));
 console.log(_.castArray('a','b','c'))
 
-//clone:复制一个对象到另一个新的对象中
+//clone:完全的复制一个对象到另一个新的对象中
 var objects = [{'a': 1}, {'b': 2}];
 var shallow = _.clone(objects);
 var obj = _.clone(objects);
@@ -201,12 +201,13 @@ console.log(shallow[0] === shallow[1]);
 console.log(shallow[0] === objects[0]);
 console.log(obj);
 
-//cloneDeep:
+//cloneDeep:递归的复制
 console.log('cloneDeep:');
 var deep = _.cloneDeep(objects);
 console.log(deep);
 console.log(objects);
 console.log(deep[0] === objects[0]);
+
 
 
 
