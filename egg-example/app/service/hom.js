@@ -34,9 +34,14 @@ module.exports = app => {
       const y = t.getFullYear();
       const d = t.getDate();
       const mon = t.getMonth();
-      return y + '年' + mon + '月' + d + '日' + h + ':' + m + ':' + s;
-      // return `${y}年${mon}月${d}日${h}:${m}:${s}`;
-
+      // return y + '年' + mon + '月' + d + '日' + h + ':' + m + ':' + s;
+      return `${y}年${this.format(mon + 1)}月${this.format(d)}日${this.format(h)}:${this.format(m)}:${this.format(s)}`;    
+    }
+    format(x) {
+      if (x < 10) {
+        return '0' + x;
+      }
+      return x;
     }
   }
 
