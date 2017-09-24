@@ -16,10 +16,6 @@ module.exports = app => {
     * text1() {
       return 'cheng';
     }
-    * text2() {
-      const arr1 = [ 1, 2, 3, 4, 5 ];
-      return arr1;
-    }
   }
   return Home;
 };

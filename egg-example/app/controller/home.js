@@ -19,7 +19,21 @@ module.exports = app => {
       this.ctx.body = r + ' ' + d;
     }
     * index5() {
-      this.ctx.body = yield this.service.home.text2();
+      this.ctx.body = yield this.service.hom.text2();
+    }
+    * index6() {
+      this.ctx.body = yield this.service.hom.text3();
+    }
+    * index7() {
+      this.ctx.body = yield this.service.hom.text4();
+    }
+    * index8() {
+      this.ctx.body = yield this.service.hom.text5();
+    }
+    * index9() {
+      // const a = yield this.service.hom.text6();
+      // this.ctx.body = yield this.service.hom.text6(3, 4);
+      this.ctx.body = this.ctx.helper.foo('a');
     }
   }
   return HomeController;
