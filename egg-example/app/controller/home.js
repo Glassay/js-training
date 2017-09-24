@@ -35,6 +35,12 @@ module.exports = app => {
       // this.ctx.body = yield this.service.hom.text6(3, 4);
       this.ctx.body = this.ctx.helper.foo('a');
     }
+    * index10() {
+      this.ctx.body = this.ctx.helper.text1();
+    }
+    * index11() {
+      this.ctx.body = this.ctx.helper.text2(this.ctx.request.query.a, this.ctx.request.query.b);
+    }
   }
   return HomeController;
 };

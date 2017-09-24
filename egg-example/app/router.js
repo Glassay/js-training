@@ -11,5 +11,6 @@ module.exports = app => {
   app.get('/pag3', 'home.index7');
   app.get('/pag4', 'home.index8');
   app.get('/pag5', 'home.index9');
-  // app.get('/pag6', 'home.index10');
+  app.get('/pag6', 'home.index10');
+  app.get('/pag7', 'home.index11');
 };
