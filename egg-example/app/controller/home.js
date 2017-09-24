@@ -1,6 +1,4 @@
 'use strict';
-const _ = require('lodash');
-
 module.exports = app => {
   class HomeController extends app.Controller {
     * index() {
@@ -21,11 +19,8 @@ module.exports = app => {
       this.ctx.body = r + ' ' + d;
     }
     * index5() {
-      const i = yield this.service.home.text2();
-      const j = yield this.service.hom.text2();
-      this.ctx.body = _.difference(i, j);
+      this.ctx.body = yield this.service.home.text2();
     }
-
   }
   return HomeController;
 };
