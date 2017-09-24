@@ -7,6 +7,15 @@ module.exports = app => {
     * find() {
       return 'hello';
     }
+    * sina() {
+      return yield app.curl('https://www.sina.com.cn');
+    }
+    * sohu() {
+      return yield app.curl('https://www.sohu.com');
+    }
+    * text2() {
+      return 'cheng';
+    }
   }
   return Home;
 };
