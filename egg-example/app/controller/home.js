@@ -41,6 +41,9 @@ module.exports = app => {
     * index11() {
       this.ctx.body = this.ctx.helper.text2(this.ctx.request.query.a, this.ctx.request.query.b);
     }
+    * index12() {
+      this.ctx.body = yield this.service.hom.text7();
+    }
   }
   return HomeController;
 };

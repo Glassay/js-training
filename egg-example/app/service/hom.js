@@ -26,6 +26,10 @@ module.exports = app => {
     * text6(a, b) {
       return a + b;
     }
+    * text7() {
+      const t = new Date();
+      return t + 8;
+    }
   }
   return Hom;
 };
