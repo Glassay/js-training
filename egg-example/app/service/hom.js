@@ -28,9 +28,18 @@ module.exports = app => {
     }
     * text7() {
       const t = new Date();
-      return t + 8;
+      const s = t.getSeconds();
+      const h = t.getHours();
+      const m = t.getMinutes();
+      const y = t.getFullYear();
+      const d = t.getDate();
+      const mon = t.getMonth();
+      return y + '年' + mon + '月' + d + '日' + h + ':' + m + ':' + s;
+      // return `${y}年${mon}月${d}日${h}:${m}:${s}`;
+
     }
   }
+
   return Hom;
 };
 
