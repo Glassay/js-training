@@ -1,4 +1,5 @@
 'use strict';
+const _ = require('lodash');
 
 module.exports = app => {
   class HomeController extends app.Controller {
@@ -16,8 +17,13 @@ module.exports = app => {
     }
     * index4() {
       const r = yield this.service.hom.text1();
-      const d = yield this.service.home.text2();
+      const d = yield this.service.home.text1();
       this.ctx.body = r + ' ' + d;
+    }
+    * index5() {
+      const i = yield this.service.home.text2();
+      const j = yield this.service.hom.text2();
+      this.ctx.body = _.difference(i, j);
     }
 
   }

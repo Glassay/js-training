@@ -13,8 +13,12 @@ module.exports = app => {
     * sohu() {
       return yield app.curl('https://www.sohu.com');
     }
-    * text2() {
+    * text1() {
       return 'cheng';
+    }
+    * text2() {
+      const arr1 = [ 1, 2, 3, 4, 5 ];
+      return arr1;
     }
   }
   return Home;

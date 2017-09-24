@@ -6,4 +6,5 @@ module.exports = app => {
   app.get('/sina', 'home.index2');
   app.get('/sohu', 'home.index3');
   app.get('/lala', 'home.index4');
+  app.get('/pag1', 'home.index5');
 };
