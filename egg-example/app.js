@@ -23,7 +23,7 @@ module.exports = app => {
       const studentSchema = knex.schema.createTableIfNotExists('student', function(table) {
         table.increments();
         table.string('name').notNullable().defaultTo('');
-        table.integer('age').notNullable().defaultTo(0);
+        table.integer('age').notNullable().defaultTo();
         table.string('class').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
