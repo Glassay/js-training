@@ -22,6 +22,6 @@ module.exports = app => {
   app.get('/map', 'home.map');
   app.post('/update', 'test.update');
   app.post('/delete', 'test.delete');
-  app.post('/get', 'test.get');
+  app.get('/get', 'test.get');
   app.post('/create', 'test.create');
 };
