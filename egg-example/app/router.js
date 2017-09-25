@@ -15,5 +15,8 @@ module.exports = app => {
   app.get('/pag6', 'home.index10');
   app.get('/pag7', 'home.index11');
   app.post('/time', 'home.index12');
-  // app.post('/pag7', 'home.index11');
+  app.get('/pag8', 'home.index13');
+  app.get('/include', 'home.include');
+  app.get('/include1', 'home.include1');
+  app.get('/invokeMap', 'home.invokeMap');
 };

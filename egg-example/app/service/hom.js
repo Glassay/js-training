@@ -35,13 +35,29 @@ module.exports = app => {
       const d = t.getDate();
       const mon = t.getMonth();
       // return y + '年' + mon + '月' + d + '日' + h + ':' + m + ':' + s;
-      return `${y}年${this.format(mon + 1)}月${this.format(d)}日${this.format(h)}:${this.format(m)}:${this.format(s)}`;    
+      return `${y}年${this.format(mon + 1)}月${this.format(d)}日${this.format(h)}:${this.format(m)}:${this.format(s)}`;
     }
     format(x) {
       if (x < 10) {
         return '0' + x;
       }
       return x;
+    }
+    * text8() {
+      const a = _.groupBy([ 1.1, 1.2, 1.3, 2.1, 2.2, 3.3 ], Math.floor);
+      return a;
+    }
+    * include() {
+      const a = _.includes([ 1, 2, 3, 4 ], 1);
+      return a;
+    }
+    * include1() {
+      const a = _.includes([ 1, 2, 3, 4, 5, 6 ], 1, 3);// 1代表要查找的值,3代表偏移量；
+      return a;
+    }
+    * invokeMap() {
+      const a = _.invokeMap([[ 6, 4, 2, 7 ], [ 9, 5, 2, 6 ]], 'sort');
+      return a;
     }
   }
 

@@ -44,6 +44,18 @@ module.exports = app => {
     * index12() {
       this.ctx.body = yield this.service.hom.text7();
     }
+    * index13() {
+      this.ctx.body = yield this.service.hom.text8();
+    }
+    * include() {
+      this.ctx.body = yield this.service.hom.include();
+    }
+    * include1() {
+      this.ctx.body = yield this.service.hom.include1();
+    }
+    * invokeMap() {
+      this.ctx.body = yield this.service.hom.invokeMap();
+    }
   }
   return HomeController;
 };
