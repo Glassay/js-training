@@ -20,4 +20,8 @@ module.exports = app => {
   app.get('/include1', 'home.include1');
   app.get('/invokeMap', 'home.invokeMap');
   app.get('/map', 'home.map');
+  app.post('/update', 'test.update');
+  app.post('/delete', 'test.delete');
+  app.post('/get', 'test.get');
+  app.post('/create', 'test.create');
 };
