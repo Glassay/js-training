@@ -56,11 +56,17 @@ module.exports = app => {
       return a;
     }
     * invokeMap() {
-      const a = _.invokeMap([[ 6, 4, 2, 7 ], [ 9, 5, 2, 6 ]], 'sort');
+      const a = _.invokeMap([[ 6, 4, 2, 7 ], [ 9, 5, 2, 6 ]], 'sort');// 可以使用已有的方法进行操作
       return a;
     }
+    * map() {
+      const a = _.map([ 9, 3, 4, 2, 1 ], this.square);// 可以自定义方法,在后面直接调用
+      return a;
+    }
+    square(x) {
+      return x * x;
+    }
   }
-
   return Hom;
 };
 

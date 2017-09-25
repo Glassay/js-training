@@ -19,4 +19,5 @@ module.exports = app => {
   app.get('/include', 'home.include');
   app.get('/include1', 'home.include1');
   app.get('/invokeMap', 'home.invokeMap');
+  app.get('/map', 'home.map');
 };

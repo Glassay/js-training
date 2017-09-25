@@ -56,6 +56,9 @@ module.exports = app => {
     * invokeMap() {
       this.ctx.body = yield this.service.hom.invokeMap();
     }
+    * map() {
+      this.ctx.body = yield this.service.hom.map();
+    }
   }
   return HomeController;
 };
