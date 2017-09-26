@@ -5,7 +5,7 @@
 'use strict';
 module.exports = app => {
   class Test extends app.Service {
-    * create(param) {
+    * add(param) {
       try {
         yield app.mysql.insert('user', param);
       } catch (e) {
@@ -15,10 +15,10 @@ module.exports = app => {
       return true;
     }
 
-    * get(req) {
+    * select() {
       let res;
       try {
-        res = yield app.mysql.get('uer', req);
+        res = yield app.mysql.select('user');
       } catch (e) {
         this.ctx.logger.error(e);
         return false;

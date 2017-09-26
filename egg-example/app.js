@@ -30,5 +30,18 @@ module.exports = app => {
       });
       yield app.mysql.query(studentSchema.toString());
     }
+
+    const hasWorker = yield app.mysql.query(knex.schema.hasTable('worker').toString());
+    if (hasWorker.length === 0) {
+      const workerSchema = knex.schema.createTableIfNotExists('worker', function(table) {
+        table.increments();
+        table.string('name').notNullable().defaultTo('');
+        table.string('sex').notNullable().defaultTo('');
+        table.string('work').notNullable().defaultTo('');
+        table.timestamp('create_at').defaultTo(knex.fn.now());
+        table.charset('utf8');
+      });
+      yield app.mysql.query(workerSchema.toString());
+    }
   });
 };

@@ -1,13 +1,13 @@
 /**
- * 2017-9-25 Jifeng Cheng
- * mysql的增删改查
+ * 2017-9-26 Jifeng Cheng
  */
+
 'use strict';
 module.exports = app => {
-  class Student extends app.Service {
+  class Worker extends app.Service {
     * add(param) {
       try {
-        yield app.mysql.insert('student', param);
+        yield app.mysql.insert('worker', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -18,7 +18,7 @@ module.exports = app => {
     * select() {
       let res;
       try {
-        res = yield app.mysql.select('student');
+        res = yield app.mysql.select('worker');
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -28,7 +28,7 @@ module.exports = app => {
 
     * delete(param) {
       try {
-        yield app.mysql.delete('student', param);
+        yield app.mysql.delete('worker', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -37,7 +37,7 @@ module.exports = app => {
     }
     * update(param) {
       try {
-        yield app.mysql.update('user', param);
+        yield app.mysql.update('worker', param);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -45,5 +45,5 @@ module.exports = app => {
       return true;
     }
   }
-  return Student;
+  return Worker;
 };
