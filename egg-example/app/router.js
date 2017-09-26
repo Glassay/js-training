@@ -32,4 +32,5 @@ module.exports = app => {
   app.post('/delete2', 'worker.delete');
   app.post('/select2', 'worker.select');
   app.post('/add2', 'worker.add');
+  app.post('/update1s', 'worker.update1');
 };

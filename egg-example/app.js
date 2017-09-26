@@ -36,6 +36,7 @@ module.exports = app => {
       const workerSchema = knex.schema.createTableIfNotExists('worker', function(table) {
         table.increments();
         table.string('name').notNullable().defaultTo('');
+        table.integer('age').notNullable().defaultTo();
         table.string('sex').notNullable().defaultTo('');
         table.string('work').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());

@@ -44,6 +44,19 @@ module.exports = app => {
       }
       return true;
     }
+    * update1s() {
+      const a = yield app.mysql.beginTransaction();
+      try {
+        yield a.update('student', { id: 1, age: 'asd' });
+        yield a.update('worker', { id: 1, age: 21 });
+        yield a.commit();
+      } catch (e) {
+        yield a.rollback();
+        this.ctx.logger.error(e);
+        return false;
+      }
+      return true;
+    }
   }
   return Worker;
 };

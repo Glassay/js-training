@@ -18,6 +18,9 @@ module.exports = app => {
     * update() {
       this.ctx.body = yield this.service.worker.update(this.ctx.request.body);
     }
+    * update1() {
+      this.ctx.body = yield this.service.worker.update1s(this.ctx.request.body);
+    }
   }
   return StartController;
 };
