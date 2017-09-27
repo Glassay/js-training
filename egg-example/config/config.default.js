@@ -26,7 +26,7 @@ module.exports = appInfo => {
       // password
       password: '111111',
       // database
-      database: 'data',
+      database: 'test',
     },
     // load into app, default is open
     app: true,

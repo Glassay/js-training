@@ -34,3 +34,4 @@ module.exports = app => {
   app.post('/add2', 'worker.add');
   app.post('/update1s', 'worker.update1');
 };
+

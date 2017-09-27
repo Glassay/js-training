@@ -3,9 +3,12 @@
 const knex = require('knex')({
   client: 'mysql',
 });
+// const logger = require('logger');
 
 module.exports = app => {
+  // const start = Date.now();
   app.beforeStart(function* () {
+    const ctx = app.createAnonymousContext();
     const hasUser = yield app.mysql.query(knex.schema.hasTable('users').toString());
     if (hasUser.length === 0) {
       const userSchema = knex.schema.createTableIfNotExists('users', function(table) {
@@ -44,5 +47,6 @@ module.exports = app => {
       });
       yield app.mysql.query(workerSchema.toString());
     }
+    ctx.logger.info('some request data');
   });
 };
