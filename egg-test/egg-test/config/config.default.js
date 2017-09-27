@@ -4,7 +4,7 @@ module.exports = appInfo => {
   const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1506131724110_2158';
+  config.keys = appInfo.name + '_1506476661302_272';
 
   // add your config here
   config.middleware = [];
@@ -14,26 +14,27 @@ module.exports = appInfo => {
     },
   };
 
+
+  // config/config.${env}.js
   config.mysql = {
-    // database configuration
+  // 单数据库信息配置
     client: {
-      // host
+    // host
       host: '127.0.0.1',
-      // port
+      // 端口号
       port: '3306',
-      // username
+      // 用户名
       user: 'root',
-      // password
+      // 密码
       password: '111111',
-      // database
-      database: 'data',
+      // 数据库名
+      database: 'school',
     },
-    // load into app, default is open
+    // 是否加载到 app 上，默认开启
     app: true,
-    // load into agent, default is close
+    // 是否加载到 agent 上，默认关闭
     agent: false,
   };
-
 
   return config;
 };
