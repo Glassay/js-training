@@ -4,7 +4,9 @@
  */
 
 'use strict';
-const knex = require('knex');
+const knex = require('knex')({
+  client: 'mysql',
+});
 module.exports = {
   * unique(app, table, name) {
     const uniqueName = knex.schema.alterTable(table, function(t) {
