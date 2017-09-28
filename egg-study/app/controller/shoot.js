@@ -1,0 +1,22 @@
+/**
+ * 2017-9-28 Jifeng Cheng
+ */
+'use strict';
+
+module.exports = app => {
+  class StartController extends app.Controller {
+    * add() {
+      this.ctx.body = yield this.service.shoot.add(this.ctx.request.body);
+    }
+    * update() {
+      this.ctx.body = yield this.service.shoot.update(this.ctx.request.body);
+    }
+    * select1() {
+      this.ctx.body = yield this.service.shoot.select1(this.ctx.request.body);
+    }
+    * select2() {
+      this.ctx.body = yield this.service.shoot.select2(this.ctx.request.body);
+    }
+  }
+  return StartController;
+};
