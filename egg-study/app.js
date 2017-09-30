@@ -13,53 +13,56 @@ module.exports = app => {
   app.beforeStart(function* () {
     // const ctx = app.createAnonymousContext();
     const ctx = app.createAnonymousContext();
-    const hasParticipant = yield app.mysql.query(knex.schema.hasTable('参与者').toString());
+    const hasParticipant = yield app.mysql.query(knex.schema.hasTable('user').toString());
     if (hasParticipant.length === 0) {
-      const participantSchema = knex.schema.createTableIfNotExists('参与者', function(table) {
+      const participantSchema = knex.schema.createTableIfNotExists('user', function(table) {
         table.increments();
-        table.string('微信号').notNullable().defaultTo('');
-        // table.string('手机号').notNullable().defaultTo('');
-        table.string('是否参赛').notNullable().defaultTo('');
-        table.integer('票数').notNullable().defaultTo(0);
-        table.string('是否违规').notNullable().defaultTo('');
+        table.string('wechat').notNullable().defaultTo('');
+        table.string('mobile').notNullable().defaultTo('');
+        table.string('in').notNullable().defaultTo('');
+        table.integer('vcount').notNullable().defaultTo(0);
+        // table.string('violation').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
 
       yield app.mysql.query(participantSchema.toString());
-      yield ctx.helper.unique(app, '参与者', '微信号');
+      yield ctx.helper.unique(app, 'user', 'wechat');
     }
 
-    const hasWorks = yield app.mysql.query(knex.schema.hasTable('作品库').toString());
+    const hasWorks = yield app.mysql.query(knex.schema.hasTable('works').toString());
     if (hasWorks.length === 0) {
-      const worksSchema = knex.schema.createTableIfNotExists('作品库', function(table) {
+      const worksSchema = knex.schema.createTableIfNotExists('works', function(table) {
         table.increments();
         // table.string('参赛者').notNullable().defaultTo('');
-        table.string('微信号').notNullable().defaultTo('');
-        table.string('作品1').notNullable().defaultTo('');
-        table.string('作品2').notNullable().defaultTo('');
-        table.string('作品3').notNullable().defaultTo('');
+        table.string('wechat').notNullable().defaultTo('');
+        table.string('works1').notNullable().defaultTo('');
+        table.string('works2').notNullable().defaultTo('');
+        table.string('works3').notNullable().defaultTo('');
+        table.string('violation').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
 
       yield app.mysql.query(worksSchema.toString());
+      yield ctx.helper.unique(app, 'works', 'wechat');
     }
 
-    const hasVote = yield app.mysql.query(knex.schema.hasTable('投票表').toString());
+    const hasVote = yield app.mysql.query(knex.schema.hasTable('votelist').toString());
     if (hasVote.length === 0) {
-      const voteSchema = knex.schema.createTableIfNotExists('投票表', function(table) {
+      const voteSchema = knex.schema.createTableIfNotExists('votelist', function(table) {
         table.increments();
-        table.string('微信号').notNullable().defaultTo('');
-        table.string('所投者1').notNullable().defaultTo('');
-        table.string('所投者2').notNullable().defaultTo('');
-        table.string('所投者3').notNullable().defaultTo('');
+        table.string('wechat').notNullable().defaultTo('');
+        table.string('vote1').notNullable().defaultTo('');
+        table.string('vate2').notNullable().defaultTo('');
+        table.string('vote3').notNullable().defaultTo('');
         // table.string('作品3').notNullable().defaultTo('');
         table.timestamp('create_at').defaultTo(knex.fn.now());
         table.charset('utf8');
       });
 
       yield app.mysql.query(voteSchema.toString());
+      yield ctx.helper.unique(app, 'user', 'wechat');
     }
   });
 };

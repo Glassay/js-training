@@ -5,8 +5,8 @@
 
 module.exports = app => {
   class StartController extends app.Controller {
-    * add() {
-      this.ctx.body = yield this.service.shoot.add(this.ctx.request.body);
+    * add1() {
+      this.ctx.body = yield this.service.shoot.add1(this.ctx.request.body);
     }
     * update() {
       this.ctx.body = yield this.service.shoot.update(this.ctx.request.body);
@@ -16,6 +16,9 @@ module.exports = app => {
     }
     * select2() {
       this.ctx.body = yield this.service.shoot.select2(this.ctx.request.body);
+    }
+    * add2() {
+      this.ctx.body = yield this.service.shoot.add2(this.ctx.request.body);
     }
   }
   return StartController;

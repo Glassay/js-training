@@ -6,9 +6,18 @@
 
 module.exports = app => {
   class Teacher extends app.Service {
-    * add(a) {
+    * add1(a) {
       try {
-        yield app.mysql.insert('参与者', a);
+        yield app.mysql.insert('user', a);
+      } catch (e) {
+        this.ctx.logger.error(e);
+        return false;
+      }
+      return true;
+    }
+    * add2(a) {
+      try {
+        yield app.mysql.insert('works', a);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -17,7 +26,7 @@ module.exports = app => {
     }
     * update(a) {
       try {
-        yield app.mysql.update('参与者', a);
+        yield app.mysql.update('user', a);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -27,7 +36,7 @@ module.exports = app => {
     * select1(a) {
       let res;
       try {
-        yield app.mysql.get('参与者', a);
+        yield app.mysql.get('user', a);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
@@ -37,7 +46,7 @@ module.exports = app => {
     * select2(req) {
       let res;
       try {
-        res = yield app.mysql.get('参与者', req);
+        res = yield app.mysql.get('user', req);
       } catch (e) {
         this.ctx.logger.error(e);
         return false;
