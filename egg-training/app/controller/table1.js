@@ -4,10 +4,10 @@
 
 'use strict';
 module.exports = app => {
-  class StartController extends app.Controller {
+  class Table1Controller extends app.Controller {
     * add() {
-      this.ctx.body = yield this.service.test.add(this.ctx.request.body);
+      this.ctx.body = yield this.service.table1.add(this.ctx.request.body);
     }
   }
-  return StartController;
+  return Table1Controller;
 };
