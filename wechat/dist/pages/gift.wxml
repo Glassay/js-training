@@ -1,0 +1,39 @@
+
+  <view>
+    <view class="view">
+      <text>简单2步,选中心动好礼物</text>
+    </view>
+    <view>
+        <view class="layout4">
+          <image class="layout5" src="{{pic1}}"/>
+          <view class="layout3"/>
+          <image class="layout5" src="{{pic1}}"/>
+          <view class="layout3"/>
+          <image class="layout5" src="{{pic1}}"/>
+        </view>
+    </view>
+    <view class="layout4">
+      <text class="word">送给TA</text>
+      <view class="layout7"/>
+      <text class="word">TA喜欢的</text>
+      <view class="layout7"/>
+      <text class="word">完成</text>
+    </view>
+    <view class="layout4">
+        <button class="layout1 word">送她</button>
+        <button class="layout1 word">送他</button>
+    </view>
+    <view class="layout1">
+      <button class="layout2">自己</button>
+      <button class="layout2">老婆/女票</button>
+      <button class="layout2">姐妹/闺蜜</button>
+    </view>
+    <view class="layout1">
+      <button class="layout2">妈妈</button>
+      <button class="layout2">长辈</button>
+      <button class="layout2">同事</button>
+    </view>
+    <view>
+      <text class="view word last">先跳过,随便逛逛</text>
+    </view>
+  </view>
