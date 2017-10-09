@@ -1,30 +1,18 @@
 
-  <view>
+  <view class="container">
     <view>姓名:程基锋</view>
     <view>年龄:22</view>
     <view>哪里人:河南</view>
     <view>专业:软件</view>
-    <view>Majors : Electronic information science and technology</view>
-    <view>Favourite : programming</view>
-
-
-
-    <view class="text">
-      <button size="mini" bindtap="add">{{count}}</button>
-    </view>
-
-
-    <view>同学评价</view>
     <view>
-        <checkbox-group bindchange="checkboxChange">
-        <label  wx:for="{{items}}" wx:key="Index">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
-        </label>
-        </checkbox-group>
+    <button class="cl" bindtap="add">{{count}}</button>
     </view>
-
-
-    <form bindsubmit="formSubmit" bindreset="formReset">
+    <checkbox-group>
+      <label  wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+        <form bindsubmit="formSubmit" bindreset="formReset">
     <view>
     <view>开关</view>
     <switch name="switch"/>
@@ -46,15 +34,16 @@
     </view>
     <view>
     <view>性别</view>
-    <checkbox-group name="性别">
-      <label><checkbox value="男"/>男</label>
-      <label><checkbox value="女"/>女</label>
-    </checkbox-group>
+    <view>
+      <checkbox-group name="性别">
+        <label><checkbox value="男"/>男</label>
+        <label><checkbox value="女"/>女</label>
+      </checkbox-group>
+    </view>
     </view>
     <view>
     <button formType="submit">Submit</button>
     <button formType="reset">Reset</button>
     </view>
     </form>
-
   </view>
