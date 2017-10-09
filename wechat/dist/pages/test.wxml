@@ -1,11 +1,14 @@
 
-  <view class="container">
-    <view>姓名:程基锋</view>
-    <view>年龄:22</view>
-    <view>哪里人:河南</view>
-    <view>专业:软件</view>
+  <view>
+    <view class="test">
+      <test>姓名:</test>
+      <test>程基锋</test>
+    </view>
+      <test class="a">年龄:22</test>
+      <test class="box">哪里人:河南</test>
+      <test class="margin">专业:软件</test>
     <view>
-    <button class="cl" bindtap="add">{{count}}</button>
+    <button size="mini" class="box a" bindtap="add">{{count}}</button>
     </view>
     <checkbox-group>
       <label  wx:for="{{items}}">

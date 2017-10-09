@@ -1,5 +1,7 @@
 
   <view>
+    <image src="{{pic1}}"/>
+    <image/>
     <button bindtap="shoot">查找图片</button>
     <image src="{{pic}}"/>
     <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop/>
