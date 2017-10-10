@@ -12,11 +12,11 @@
   }
   .layout2 {
     /* display: block; */
-    background-color:bisque;
+    background-color: #FFF;
     color:teal;
     /* font-size: 30px; */
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   .layout3 {
     background-color: black;
@@ -33,6 +33,7 @@
   .layout5 {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
   }
   .layout6 {
     display: flex;
@@ -43,18 +44,38 @@
   .layout7 {
     background-color: white;
     height: 1px;
-    width: 40px;
+    width: 48px;
+  }
+  .layout8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px 5px 5px;
+  }
+  .layout9 {
+    margin: 15px 15px 15px 15px;
+  }
+  .layout10 {
+    width: 60px;
+    height: 60px;
   }
   .word {
-    color:turquoise;
+    color: black;
     font-size: 15px;
+  }
+  .word1 {
+    color: turquoise;
+    font-size: 10px;
   }
   .last {
     position: fixed;
     bottom: 0;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
+    
   }
+  
 </style>
 
 <template>
@@ -66,9 +87,9 @@
         <view class="layout4">
           <image class="layout5" src="{{pic1}}"></image>
           <view class="layout3"></view>
-          <image class="layout5" src="{{pic1}}"></image>
+          <image class="layout5" src="{{pic2}}"></image>
           <view class="layout3"></view>
-          <image class="layout5" src="{{pic1}}"></image>
+          <image class="layout5" src="{{pic3}}"></image>
         </view>
     </view>
     <view class="layout4">
@@ -79,18 +100,36 @@
       <text class="word">完成</text>
     </view>
     <view class="layout4">
-        <button class="layout1 word">送她</button>
-        <button class="layout1 word">送他</button>
+        <view class="layout8 word" @tap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
+        <view class="layout8 word" @tap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
     </view>
-    <view class="layout1">
-      <button class="layout2">自己</button>
-      <button class="layout2">老婆/女票</button>
-      <button class="layout2">姐妹/闺蜜</button>
+    <view class="layout8 word1">
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{me}}"></image>
+        <text>{{t1}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{her}}"></image>
+        <text>{{t2}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{they}}"></image>
+        <text>{{t3}}</text>
+      </view>
     </view>
-    <view class="layout1">
-      <button class="layout2">妈妈</button>
-      <button class="layout2">长辈</button>
-      <button class="layout2">同事</button>
+    <view class="layout8 word1">
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{gra}}"></image>
+        <text>{{t4}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{grap}}"></image>
+        <text>{{t5}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{clo}}"></image>
+        <text>{{t6}}</text>
+      </view>
     </view>
     <view>
       <text class="view word last">先跳过,随便逛逛</text>
@@ -105,7 +144,68 @@
       navigationBarTitleText: '礼物说'
     }
     data = {
-      pic1: '../image/tou.png'
+      pic1: '../image/man.png',
+      pic2: '../image/like.png',
+      pic3: '../image/done.png',
+      me: '../image/背包.png',
+      her: '../image/皮卡丘-2.png',
+      they: '../image/小拉达.png',
+      gra: '../image/卡比兽.png',
+      grap: '../image/伊布.png',
+      clo: '../image/杰尼龟.png',
+      boy: '../image/喵猫.png',
+      bro: '../image/迷你龙.png',
+      baba: '../image/可达鸭.png',
+      t1: '自己',
+      t2: '老婆/女票',
+      t3: '姐妹/闺蜜',
+      t4: '妈妈',
+      t5: '长辈',
+      t6: '同事',
+      color1: 'darkorange',
+      color2: 'dark',
+      color11: 'red',
+      color22: 'white'
+    }
+    methods = {
+      she() {
+        let self = this
+        self.me = '../image/背包.png'
+        self.her = '../image/皮卡丘-2.png'
+        self.they = '../image/小拉达.png'
+        self.gra = '../image/卡比兽.png'
+        self.grap = '../image/伊布.png'
+        self.clo = '../image/杰尼龟.png'
+        self.t1 = '自己'
+        self.t2 = '老婆/女票'
+        self.t3 = '姐妹/闺蜜'
+        self.t4 = '妈妈'
+        self.t5 = '长辈'
+        self.t6 = '同事'
+        self.color1 = 'darkorange'
+        self.color2 = 'dark'
+        self.color11 = 'red'
+        self.color22 = 'white'
+      },
+      he() {
+        let self = this
+        self.me = '../image/背包.png'
+        self.her = '../image/喵猫.png'
+        self.they = '../image/迷你龙.png'
+        self.gra = '../image/可达鸭.png'
+        self.grap = '../image/伊布.png'
+        self.clo = '../image/杰尼龟.png'
+        self.t1 = '自己'
+        self.t2 = '老公/男票'
+        self.t3 = '兄弟/基友'
+        self.t4 = '爸爸'
+        self.t5 = '长辈'
+        self.t6 = '同事'
+        self.color2 = 'darkorange'
+        self.color1 = 'dark'
+        self.color11 = 'white'
+        self.color22 = 'red'
+      }
     }
   }
 </script>

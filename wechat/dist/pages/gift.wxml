@@ -7,9 +7,9 @@
         <view class="layout4">
           <image class="layout5" src="{{pic1}}"/>
           <view class="layout3"/>
-          <image class="layout5" src="{{pic1}}"/>
+          <image class="layout5" src="{{pic2}}"/>
           <view class="layout3"/>
-          <image class="layout5" src="{{pic1}}"/>
+          <image class="layout5" src="{{pic3}}"/>
         </view>
     </view>
     <view class="layout4">
@@ -20,18 +20,36 @@
       <text class="word">完成</text>
     </view>
     <view class="layout4">
-        <button class="layout1 word">送她</button>
-        <button class="layout1 word">送他</button>
+        <view class="layout8 word" bindtap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
+        <view class="layout8 word" bindtap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
     </view>
-    <view class="layout1">
-      <button class="layout2">自己</button>
-      <button class="layout2">老婆/女票</button>
-      <button class="layout2">姐妹/闺蜜</button>
+    <view class="layout8 word1">
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{me}}"/>
+        <text>{{t1}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{her}}"/>
+        <text>{{t2}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{they}}"/>
+        <text>{{t3}}</text>
+      </view>
     </view>
-    <view class="layout1">
-      <button class="layout2">妈妈</button>
-      <button class="layout2">长辈</button>
-      <button class="layout2">同事</button>
+    <view class="layout8 word1">
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{gra}}"/>
+        <text>{{t4}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{grap}}"/>
+        <text>{{t5}}</text>
+      </view>
+      <view class="layout2 layout9 view">
+        <image class="layout10" src="{{clo}}"/>
+        <text>{{t6}}</text>
+      </view>
     </view>
     <view>
       <text class="view word last">先跳过,随便逛逛</text>

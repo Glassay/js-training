@@ -12,11 +12,11 @@
   }
   .layout2 {
     /* display: block; */
-    background-color:bisque;
+    background-color: #FFF;
     color:teal;
     /* font-size: 30px; */
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   .layout3 {
     background-color: black;
@@ -33,6 +33,7 @@
   .layout5 {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
   }
   .layout6 {
     display: flex;
@@ -43,15 +44,35 @@
   .layout7 {
     background-color: white;
     height: 1px;
-    width: 40px;
+    width: 48px;
+  }
+  .layout8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px 5px 5px;
+  }
+  .layout9 {
+    margin: 15px 15px 15px 15px;
+  }
+  .layout10 {
+    width: 60px;
+    height: 60px;
   }
   .word {
-    color:turquoise;
+    color: black;
     font-size: 15px;
+  }
+  .word1 {
+    color: turquoise;
+    font-size: 10px;
   }
   .last {
     position: fixed;
     bottom: 0;
-    justify-content: center;
     width: 100%;
+    justify-content: center;
+    
   }
+  
