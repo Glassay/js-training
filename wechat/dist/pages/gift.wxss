@@ -3,60 +3,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
-  .layout1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 40px;
-  }
-  .layout2 {
+  .pic_text {
     /* display: block; */
     background-color: #FFF;
     color:teal;
     /* font-size: 30px; */
     width: 90px;
     height: 90px;
+    margin: 15px 15px 15px 15px;
   }
-  .layout3 {
+  .line1 {
     background-color: black;
     height: 1px;
     width: 80px;
   }
-  .layout4 {
+  .entirety {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
   }
-  .layout5 {
+  .circle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
   }
-  .layout6 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 15px;
-  }
-  .layout7 {
-    background-color: white;
+  .line2 {
+    background-color: #FFF;
     height: 1px;
     width: 48px;
   }
-  .layout8 {
+  .divide {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 5px 5px 5px 5px;
   }
-  .layout9 {
-    margin: 15px 15px 15px 15px;
-  }
-  .layout10 {
+  .pic_style {
     width: 60px;
     height: 60px;
   }
@@ -73,6 +60,5 @@
     bottom: 0;
     width: 100%;
     justify-content: center;
-    
   }
   

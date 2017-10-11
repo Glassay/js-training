@@ -3,60 +3,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
-  .layout1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 40px;
-  }
-  .layout2 {
+  .pic_text {
     /* display: block; */
     background-color: #FFF;
     color:teal;
     /* font-size: 30px; */
     width: 90px;
     height: 90px;
+    margin: 15px 15px 15px 15px;
   }
-  .layout3 {
+  .line1 {
     background-color: black;
     height: 1px;
     width: 80px;
   }
-  .layout4 {
+  .entirety {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
   }
-  .layout5 {
+  .circle {
     width: 30px;
     height: 30px;
     border-radius: 50%;
   }
-  .layout6 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 15px;
-  }
-  .layout7 {
-    background-color: white;
+  .line2 {
+    background-color: #FFF;
     height: 1px;
     width: 48px;
   }
-  .layout8 {
+  .divide {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     margin: 5px 5px 5px 5px;
   }
-  .layout9 {
-    margin: 15px 15px 15px 15px;
-  }
-  .layout10 {
+  .pic_style {
     width: 60px;
     height: 60px;
   }
@@ -73,7 +60,6 @@
     bottom: 0;
     width: 100%;
     justify-content: center;
-    
   }
   
 </style>
@@ -84,50 +70,50 @@
       <text>简单2步,选中心动好礼物</text>
     </view>
     <view>
-        <view class="layout4">
-          <image class="layout5" src="{{pic1}}"></image>
-          <view class="layout3"></view>
-          <image class="layout5" src="{{pic2}}"></image>
-          <view class="layout3"></view>
-          <image class="layout5" src="{{pic3}}"></image>
+        <view class="entirety">
+          <image class="circle" src="{{pic1}}"></image>
+          <view class="line1"></view>
+          <image class="circle" src="{{pic2}}"></image>
+          <view class="line1"></view>
+          <image class="circle" src="{{pic3}}"></image>
         </view>
     </view>
-    <view class="layout4">
+    <view class="entirety">
       <text class="word">送给TA</text>
-      <view class="layout7"></view>
+      <view class="line2"></view>
       <text class="word">TA喜欢的</text>
-      <view class="layout7"></view>
+      <view class="line2"></view>
       <text class="word">完成</text>
     </view>
-    <view class="layout4">
-        <view class="layout8 word" @tap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
-        <view class="layout8 word" @tap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
+    <view class="entirety">
+        <view class="divide word" @tap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
+        <view class="divide word" @tap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
     </view>
-    <view class="layout8 word1">
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{me}}"></image>
+    <view class="divide word1">
+      <view class="pic_text view">
+        <image class="pic_style" src="{{me}}"></image>
         <text>{{t1}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{her}}"></image>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{her}}"></image>
         <text>{{t2}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{they}}"></image>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{they}}"></image>
         <text>{{t3}}</text>
       </view>
     </view>
-    <view class="layout8 word1">
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{gra}}"></image>
+    <view class="divide word1">
+      <view class="pic_text view">
+        <image class="pic_style" src="{{gra}}"></image>
         <text>{{t4}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{grap}}"></image>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{grap}}"></image>
         <text>{{t5}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{clo}}"></image>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{clo}}"></image>
         <text>{{t6}}</text>
       </view>
     </view>

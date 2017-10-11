@@ -4,50 +4,50 @@
       <text>简单2步,选中心动好礼物</text>
     </view>
     <view>
-        <view class="layout4">
-          <image class="layout5" src="{{pic1}}"/>
-          <view class="layout3"/>
-          <image class="layout5" src="{{pic2}}"/>
-          <view class="layout3"/>
-          <image class="layout5" src="{{pic3}}"/>
+        <view class="entirety">
+          <image class="circle" src="{{pic1}}"/>
+          <view class="line1"/>
+          <image class="circle" src="{{pic2}}"/>
+          <view class="line1"/>
+          <image class="circle" src="{{pic3}}"/>
         </view>
     </view>
-    <view class="layout4">
+    <view class="entirety">
       <text class="word">送给TA</text>
-      <view class="layout7"/>
+      <view class="line2"/>
       <text class="word">TA喜欢的</text>
-      <view class="layout7"/>
+      <view class="line2"/>
       <text class="word">完成</text>
     </view>
-    <view class="layout4">
-        <view class="layout8 word" bindtap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
-        <view class="layout8 word" bindtap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
+    <view class="entirety">
+        <view class="divide word" bindtap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
+        <view class="divide word" bindtap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
     </view>
-    <view class="layout8 word1">
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{me}}"/>
+    <view class="divide word1">
+      <view class="pic_text view">
+        <image class="pic_style" src="{{me}}"/>
         <text>{{t1}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{her}}"/>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{her}}"/>
         <text>{{t2}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{they}}"/>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{they}}"/>
         <text>{{t3}}</text>
       </view>
     </view>
-    <view class="layout8 word1">
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{gra}}"/>
+    <view class="divide word1">
+      <view class="pic_text view">
+        <image class="pic_style" src="{{gra}}"/>
         <text>{{t4}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{grap}}"/>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{grap}}"/>
         <text>{{t5}}</text>
       </view>
-      <view class="layout2 layout9 view">
-        <image class="layout10" src="{{clo}}"/>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{clo}}"/>
         <text>{{t6}}</text>
       </view>
     </view>
