@@ -1,0 +1,118 @@
+<style lang="less">
+.cl {
+  color:red;
+  background-color:aqua;
+  height: 100px;
+}
+.a {
+  color: rebeccapurple;
+  background-color: green;
+  font-size: 30px;
+  border: 1px dashed solid red;
+  border-radius: 10px;
+}
+.box {
+  margin-top: 20px;
+  //margin: 20px; //外
+  padding: 20px; //内
+}
+.test {
+  display: flex;
+  //justify-content: space-between;//zhu space-between
+  //align-content: ;
+  border: 1px dashed solid red;
+  // border-radius: 10px;
+  // border-bottom: 1px solid rebeccapurple;
+  // border-top: 1px solid red;
+  border-radius: 45px;
+}
+</style>
+
+<template>
+  <view>
+    <view class="test">
+      <test>姓名:</test>
+      <test>程基锋</test>
+    </view>
+      <test class="a">年龄:22</test>
+      <test class="box">哪里人:河南</test>
+      <test class="margin">专业:软件</test>
+    <view>
+    <button size="mini" class="box a" bindtap="add">{{count}}</button>
+    </view>
+    <checkbox-group>
+      <label wx:for="{{items}}">
+        <checkbox value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </checkbox-group>
+        <form bindsubmit="formSubmit" bindreset="formReset">
+    <view>
+    <view>开关</view>
+    <switch name="switch"/>
+    </view>
+    <view>
+    <view>音量大小</view>
+    <slider name="slider" show-value ></slider>
+    </view>
+    <view>
+    <view>input</view>
+    <input name="input" placeholder="please input here" />
+    </view>
+    <view>
+    <view>checkbox</view>
+    <radio-group name="radio-group">
+      <label><radio value="checkbox1"/>radio1</label>
+      <label><radio value="checkbox2"/>radio2</label>
+    </radio-group>
+    </view>
+    <view>
+    <view>性别</view>
+    <view>
+      <checkbox-group name="性别">
+        <label><checkbox value="男"/>男</label>
+        <label><checkbox value="女"/>女</label>
+      </checkbox-group>
+    </view>
+    </view>
+    <view>
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+    </view>
+    </form>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '个人介绍'
+    }
+    data = {
+      count: 0,
+      items: [
+      {name: 'USA', value: '帅气'},
+      {name: 'CHN', value: '男神'},
+      {name: 'BRA', value: '完美'},
+      {name: 'JPN', value: '学霸'},
+      {name: 'ENG', value: '王者'},
+      {name: 'TUR', value: '10K'}
+      ]
+    }
+    formSubmit(e) {
+      console.log('form发生了submit事件，携带数据为：提交成功', e.detail.value)
+    }
+    formReset() {
+      console.log('form发生了reset事件')
+    }
+    methods = {
+      add() {
+        let self = this
+
+        self.count++
+      }
+
+    }
+    onLoad() {}
+  }
+</script>

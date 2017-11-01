@@ -1,0 +1,57 @@
+
+  <view>
+    <view class="view">
+      <text>简单2步,选中心动好礼物</text>
+    </view>
+    <view>
+        <view class="entirety">
+          <image class="circle" src="{{pic1}}"/>
+          <view class="line1"/>
+          <image class="circle" src="{{pic2}}"/>
+          <view class="line1"/>
+          <image class="circle" src="{{pic3}}"/>
+        </view>
+    </view>
+    <view class="entirety">
+      <text class="word">送给TA</text>
+      <view class="line2"/>
+      <text class="word">TA喜欢的</text>
+      <view class="line2"/>
+      <text class="word">完成</text>
+    </view>
+    <view class="entirety">
+        <view class="divide word" bindtap="she" style="color: {{color1}}; border-bottom: 1px solid {{color11}};">送她</view>
+        <view class="divide word" bindtap="he" style="color: {{color2}}; border-bottom: 1px solid {{color22}};">送他</view>
+    </view>
+    <view class="divide word1">
+      <view class="pic_text view">
+        <image class="pic_style" src="{{me}}"/>
+        <text>{{t1}}</text>
+      </view>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{her}}"/>
+        <text>{{t2}}</text>
+      </view>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{they}}"/>
+        <text>{{t3}}</text>
+      </view>
+    </view>
+    <view class="divide word1">
+      <view class="pic_text view">
+        <image class="pic_style" src="{{gra}}"/>
+        <text>{{t4}}</text>
+      </view>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{grap}}"/>
+        <text>{{t5}}</text>
+      </view>
+      <view class="pic_text view">
+        <image class="pic_style" src="{{clo}}"/>
+        <text>{{t6}}</text>
+      </view>
+    </view>
+    <view>
+      <text class="view word last">先跳过,随便逛逛</text>
+    </view>
+  </view>
