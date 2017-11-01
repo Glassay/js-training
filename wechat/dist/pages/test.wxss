@@ -1,1 +1,0 @@
-.cl{color:red;background-color:aqua;height:100px}.a{color:rebeccapurple;background-color:green;font-size:30px;border:1px dashed solid red;border-radius:10px}.box{margin-top:20px;padding:20px}.test{display:flex;border:1px dashed solid red;border-radius:45px}
