@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{4:function(o,s,n){"use strict";n.r(s);var c=n(0),e=n.n(c);console.log(e.a.camelCase("FOO BAR")),console.log("this is for pc page")}},[[4,0]]]);
